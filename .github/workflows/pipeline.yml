@@ -47,12 +47,9 @@ jobs:
       # ------------------------
       # 5. Trivy Scan (Dependencies + Image)
       # ------------------------
-      - name: Install Trivy
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget
-          wget https://github.com/aquasecurity/trivy/releases/trivy_0.68.2_Linux-64bit.deb
-          sudo dpkg -i trivy_0.68.2_Linux-64bit.deb
-
-      - name: Run Trivy scan
-        run: trivy image devsecops-simple --severity HIGH,CRITICAL
+      - name: Trivy Image Scan
+        uses: aquasecurity/trivy-action@v0.33.1
+        with:
+          image-ref: devsecops-simple
+          severity: HIGH,CRITICAL
+          exit-code: '0'
