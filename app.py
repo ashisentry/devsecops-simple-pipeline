@@ -11,5 +11,4 @@ def version():
 
 
 def greet(name):
-#    x=1
     return f"Hello {name}, welcome to DevSecOps!"
