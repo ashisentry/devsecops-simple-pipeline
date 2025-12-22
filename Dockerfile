@@ -1,6 +1,7 @@
-#FROM python:3.10-slim #initial dockerfile
+FROM python:3.10-slim 
+
 #older image used to check if there's any vulnerabilities
-FROM python:3.8-slim  
+#FROM python:3.8-slim  
 
 WORKDIR /app
 COPY requirements.txt .
