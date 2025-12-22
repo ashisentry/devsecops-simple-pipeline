@@ -52,4 +52,4 @@ jobs:
         with:
           image-ref: devsecops-simple
           severity: HIGH,CRITICAL
-          exit-code: '0'
+          exit-code: 1
