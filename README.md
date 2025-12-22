@@ -52,3 +52,6 @@ This pipeline demonstrates **shift-left security** by identifying issues early i
 5. **GitHub Actions** – CI/CD automation  
 
 ---
+
+#### Note:
+Implemented Trivy container and filesystem scanning in CI/CD. Initial scans produced zero critical findings, validating secure base image selection and dependency hygiene. Introduced controlled vulnerable dependencies to validate detection and enforcement mechanisms.
